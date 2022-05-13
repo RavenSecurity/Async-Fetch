@@ -8,6 +8,14 @@ button.addEventListener("click", function() {
     .then(res => res.json())
     .then(data => {
         console.log(data)
+
+        // Local Storage
+        localStorage.setItem("Name", data.name);
+        localStorage.setItem("Age", data.age);
+        localStorage.setItem("Count", data.count);
+        localStorage.setItem("Country", data.country_id);
+
+        // Print result
         const list = document.createElement("div");
         list.innerHTML = data.name + ", " + data.age + " ans" + " (counted " + data.count + " times in " + data.country_id + ")"
         div.appendChild(list);
