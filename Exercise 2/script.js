@@ -9,7 +9,7 @@ button.addEventListener("click", function() {
     .then(data => {
         console.log(data)
         const list = document.createElement("div");
-        list.innerHTML = data.name + ", " + data.age + " ans";
+        list.innerHTML = data.name + ", " + data.age + " ans" + " (counted " + data.count + " times in " + data.country_id + ")"
         div.appendChild(list);
         return data;
 });
